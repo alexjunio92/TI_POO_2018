@@ -1,0 +1,37 @@
+Documento das funcionalidades
+Código
+
+Programa fazer reservas de passagens aéreas
+
+Há 30 voos (int vagasDisponiveis, Assentos[25])
+	Voo[30]
+Cada voo tem 25 assentos
+	classe assento(bool isAssentoReservado, Passageiro fulaninho)
+	Os assentos são categorizados (herança)	
+	5 de 1a classe
+	5 de classe executiva
+	15 de classe economica
+Usuário
+	nome
+	cpf(9 dígitos iniciais - PK)
+Funções
+	InicializarDados()
+		regra do número dos voos 1001 a 1010, 2001 a 2010, 3001 a 3010 - ok
+		preencher aleatoriamente 70% dos voos (525 reservas em todos os voos) - ok
+		assento 1 para 1 - ok
+		possível problema 2 passageiros no mesmo assento/voo
+	IncluirReserva(int numVoo, int classePoltrona, string cpf)
+		apresentar assentos vagos no voo para a classePoltrona
+		o usuário escolherá um assento
+		validar se o voo existe (exception)
+		validar se o voo tá lotado
+		validar se o passageiro já tem reserva no voo
+		validar se há assento disponível
+	ExcluirReserva(int numVoo, string cpf)
+		validar se o voo existe (exception)
+		validar se há o passageiro no voo
+		ao remover usuário do assento, alterar o isAssentoReservado e vagasDisponíveis
+	ImprimirReserva(int numVoo)
+		validar se o voo existe (exception)
+		imprimir número de reservas - ok
+		relação de passageiros (cpf, numero do assento e classe do assento) - ok
